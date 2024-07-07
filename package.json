@@ -1,5 +1,15 @@
 {
   "dependencies": {
     "JSONStream": "^1.3.5"
-  }
+  },
+  "name": "kiokun-html-csr",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {},
+  "scripts": {
+    "build": "node data/jmdict2files.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
