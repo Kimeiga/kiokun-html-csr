@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="preload" href="./dictionary/私.json" as="fetch" crossorigin="anonymous">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const pathSegments = window.location.pathname.split('/');
+            const word = pathSegments.pop() || pathSegments.pop();  // Works with or without trailing slash
+
+            if (word) {
+                const fetchUrl = `./dictionary/${encodeURIComponent(word)}.json`;
+
+                fetch(fetchUrl)
+                    .then(response => response.json())
+                    .then(data => console.log(data))
+                    .catch(error => console.error('Error loading the JSON:', error));
+            } else {
+                console.error('No word found in the URL path');
+            }
+        });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

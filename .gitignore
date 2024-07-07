@@ -1,0 +1,4 @@
+/dictionary
+/node_modules
+.DS_Store
+data/jmdict-eng-3.5.0.json
